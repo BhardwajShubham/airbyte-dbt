@@ -63,8 +63,8 @@ where 1 = 1
 -- depends_on: __dbt__cte__EXCHANGE_RATES_AB3
 select
     BASE,
-    date_format(DATE, '%d/%m/%Y'),
-    RATES,
+    DATE,
+    (RATES * 2),
     _AIRBYTE_AB_ID,
     _AIRBYTE_EMITTED_AT,
     convert_timezone('UTC', current_timestamp()) as _AIRBYTE_NORMALIZED_AT,
