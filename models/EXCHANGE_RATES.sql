@@ -70,9 +70,3 @@ select
     convert_timezone('UTC', current_timestamp()) as _AIRBYTE_NORMALIZED_AT,
     _AIRBYTE_EXCHANGE_RATES_HASHID
 from __dbt__cte__EXCHANGE_RATES_AB3
--- EXCHANGE_RATES from "WTTDEMO".PUBLIC._AIRBYTE_RAW_EXCHANGE_RATES
-
-
-            ) order by (_AIRBYTE_EMITTED_AT)
-      );
-
