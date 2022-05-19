@@ -1,9 +1,7 @@
 {{ config (
 materialized="table",
 )}}
-      create or replace  table "WTTDEMO".PUBLIC."EXCHANGE_RATES"  as
-      (select * from(
-            
+           
 with __dbt__cte__EXCHANGE_RATES_AB1 as (
 
 -- SQL model to parse JSON blob stored in a single column and extract into separated field columns as described by the JSON Schema
@@ -73,8 +71,8 @@ select
     _AIRBYTE_EXCHANGE_RATES_HASHID
 from __dbt__cte__EXCHANGE_RATES_AB3
 -- EXCHANGE_RATES from "WTTDEMO".PUBLIC._AIRBYTE_RAW_EXCHANGE_RATES
-where 1 = 1
+
 
             ) order by (_AIRBYTE_EMITTED_AT)
       );
-    alter table "WTTDEMO".PUBLIC."EXCHANGE_RATES" cluster by (_AIRBYTE_EMITTED_AT);
+
