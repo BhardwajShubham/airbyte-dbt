@@ -1,7 +1,6 @@
-
-
-      create or replace  table "WTTDEMO".PUBLIC."EXCHANGE_RATES_RATES"  as
-      (select * from(
+{{ config (
+materialized="table";
+)}}
             
 with __dbt__cte__EXCHANGE_RATES_RATES_AB1 as (
 
@@ -1230,9 +1229,4 @@ select
     convert_timezone('UTC', current_timestamp()) as _AIRBYTE_NORMALIZED_AT,
     _AIRBYTE_RATES_HASHID
 from __dbt__cte__EXCHANGE_RATES_RATES_AB3
--- RATES at exchange_rates/rates from "WTTDEMO".PUBLIC."EXCHANGE_RATES"
-where 1 = 1
 
-            ) order by (_AIRBYTE_EMITTED_AT)
-      );
-    alter table "WTTDEMO".PUBLIC."EXCHANGE_RATES_RATES" cluster by (_AIRBYTE_EMITTED_AT);
