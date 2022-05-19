@@ -1,5 +1,5 @@
 {{ config (
-materialized="table";
+materialized="table"
 )}}
             
 with __dbt__cte__EXCHANGE_RATES_RATES_AB1 as (
