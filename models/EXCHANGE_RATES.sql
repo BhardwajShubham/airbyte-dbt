@@ -1,5 +1,5 @@
 {{ config (
-materialized="table";
+materialized="table",
 )}}
       create or replace  table "WTTDEMO".PUBLIC."EXCHANGE_RATES"  as
       (select * from(
