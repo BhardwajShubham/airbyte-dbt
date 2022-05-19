@@ -64,7 +64,7 @@ where 1 = 1
 select
     BASE,
     DATE,
-    (RATES * 2),
+    RATES,
     _AIRBYTE_AB_ID,
     _AIRBYTE_EMITTED_AT,
     convert_timezone('UTC', current_timestamp()) as _AIRBYTE_NORMALIZED_AT,
